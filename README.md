@@ -48,7 +48,7 @@
 
 ---
 
-# 📖 Overview
+## Overview
 
 This repository provisions a production-ready, enterprise-grade Azure ingress architecture using Terraform.
 
@@ -76,7 +76,7 @@ Traffic is automatically routed through Azure Front Door, which continuously mon
 
 ---
 
-# 🎯 Business Scenario
+## Business Scenario
 
 A global organization hosts a customer-facing web application serving users across multiple regions.
 
@@ -93,7 +93,7 @@ This project demonstrates how Azure Front Door Premium, Application Gateway, App
 
 ---
 
-# 🤔 Why this Architecture?
+## Why this Architecture?
 
 Compared with exposing an Application Gateway directly to the Internet, this design provides:
 
@@ -108,7 +108,7 @@ Compared with exposing an Application Gateway directly to the Internet, this des
 
 ---
 
-# 🏛 Architecture Principles
+## Architecture Principles
 
 This solution is designed around the following principles:
 
@@ -123,7 +123,7 @@ This solution is designed around the following principles:
 
 ---
 
-# 🌐 Solution Architecture
+## Solution Architecture
 
 Traffic Flow
 
@@ -152,7 +152,7 @@ Private DNS
 
 ---
 
-# ✨ Key Features
+## Key Features
 
 - Enterprise-grade Azure architecture
 - Active-Standby deployment
@@ -167,7 +167,7 @@ Private DNS
 
 ---
 
-# ☁ Azure Services Used
+## Azure Services Used
 
 | Azure Service | Purpose |
 |---------------|----------|
@@ -182,7 +182,7 @@ Private DNS
 
 ---
 
-# 🌍 High Availability Strategy
+## High Availability Strategy
 
 The architecture provides regional resilience using Azure Front Door Premium.
 
@@ -194,7 +194,7 @@ The architecture provides regional resilience using Azure Front Door Premium.
 
 ---
 
-# 🔒 Security Design
+## Security Design
 
 The solution follows a defense-in-depth approach.
 
@@ -210,7 +210,7 @@ Implemented security controls include:
 
 ---
 
-# 📂 Terraform Structure
+## Terraform Structure
 
 ```
 environments/
@@ -229,7 +229,7 @@ modules/
 
 ---
 
-# 🚀 Deployment Guide
+##  Deployment Guide
 
 ## Prerequisites
 
@@ -259,7 +259,7 @@ Estimated deployment time:
 
 ---
 
-# 📤 Outputs
+## Outputs
 
 Terraform returns:
 
@@ -271,7 +271,7 @@ Terraform returns:
 
 ---
 
-# 🔄 Routing & Failover
+## Routing & Failover
 
 Azure Front Door configuration:
 
@@ -284,7 +284,7 @@ If the primary region becomes unavailable, traffic is automatically redirected t
 
 ---
 
-# ✅ Validation
+## Validation
 
 ```powershell
 terraform state list
@@ -298,7 +298,7 @@ Invoke-WebRequest -Uri "<frontdoor_url>"
 
 ---
 
-# 🛠 Troubleshooting
+## Troubleshooting
 
 Includes guidance for:
 
@@ -313,7 +313,7 @@ Includes guidance for:
 
 ---
 
-# 💰 Cost Considerations
+## Cost Considerations
 
 Primary cost drivers:
 
@@ -327,7 +327,7 @@ This architecture prioritizes reliability and enterprise resilience over minimum
 
 ---
 
-# 🚀 Future Enhancements
+## Future Enhancements
 
 - HTTPS end-to-end
 - Azure Key Vault
@@ -344,7 +344,7 @@ This architecture prioritizes reliability and enterprise resilience over minimum
 
 ---
 
-# 📚 Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates practical implementation of:
 
@@ -360,7 +360,7 @@ This project demonstrates practical implementation of:
 
 ---
 
-# 💡 Lessons Learned
+## Lessons Learned
 
 During implementation several real-world Azure networking challenges were encountered:
 
@@ -375,7 +375,7 @@ Resolving these issues helped shape a more resilient and production-ready archit
 
 ---
 
-# 📊 Repository Statistics
+## Repository Statistics
 
 | Metric | Value |
 |----------|--------|
@@ -388,7 +388,7 @@ Resolving these issues helped shape a more resilient and production-ready archit
 
 ---
 
-# 👥 Who is this Project For?
+## Who is this Project For?
 
 - Cloud Engineers
 - Azure Architects
@@ -401,7 +401,7 @@ Resolving these issues helped shape a more resilient and production-ready archit
 
 ---
 
-# 🧹 Cleanup
+## Cleanup
 
 ```powershell
 terraform destroy -auto-approve
@@ -409,7 +409,7 @@ terraform destroy -auto-approve
 
 ---
 
-# 🏛 Azure Well-Architected Framework
+## Azure Well-Architected Framework
 
 This solution aligns with Microsoft Azure Well-Architected Framework:
 
@@ -421,7 +421,7 @@ This solution aligns with Microsoft Azure Well-Architected Framework:
 
 ---
 
-# 👨‍💻 Author
+## Author
 
 **Prandip Barooah**
 
