@@ -1,6 +1,12 @@
-# Azure-AFD-AppGw-AppService-HA-Architecture-Terraform
+# Enterprise Highly Available Multi-Region Web Application on Azure
 
-Production-style Azure Front Door + App Gateway + Private Link active-standby architecture using Terraform.
+## Azure Front Door + Application Gateway + App Service + Terraform
+
+> Production-ready Azure infrastructure built with Terraform using Azure Front Door, Application Gateway, and App Service to deliver secure, scalable, and highly available web applications.
+
+![Azure](https://img.shields.io/badge/Azure-Cloud-blue)
+![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
+![Architecture](https://img.shields.io/badge/Enterprise-Architecture-green)
 
 ## Overview
 
