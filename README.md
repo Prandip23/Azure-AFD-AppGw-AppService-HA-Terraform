@@ -8,6 +8,24 @@
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
 ![Architecture](https://img.shields.io/badge/Enterprise-Architecture-green)
 
+
+## 📑 Table of Contents
+
+- Overview
+- Business Scenario
+- Architecture
+- Features
+- Azure Services
+- Terraform Structure
+- Deployment
+- Security
+- Routing & Failover
+- Validation
+- Troubleshooting
+- Future Enhancements
+- Learning Outcomes
+
+
 ## Overview
 
 This repository provisions a two-region Azure web application ingress stack with active-standby traffic behavior:
@@ -20,6 +38,126 @@ This repository provisions a two-region Azure web application ingress stack with
 - Private connectivity: Private Endpoints + Private DNS (`privatelink.azurewebsites.net`)
 
 The solution is designed so Front Door prefers the Central India origin (priority 1) and fails over to South India (priority 2).
+
+
+## 🎯 Business Scenario
+
+A global organization hosts a customer-facing web application that serves users across multiple regions. The application must remain available during regional outages while maintaining low latency, secure connectivity, and simplified operational management.
+This project demonstrates how to build a production-ready Azure ingress architecture using Azure Front Door Premium, Application Gateway, Private Link, and App Service, provisioned entirely through Terraform.
+The solution follows Azure Well-Architected Framework principles, emphasizing reliability, security, operational excellence, and infrastructure as code.
+
+
+Internet
+↓
+Azure Front Door Premium
+↓
+Central India App Gateway
+                    │
+                    ▼
+         Linux App Service
+
+        OR
+
+South India App Gateway
+                    │
+                    ▼
+         Linux App Service
+↓
+Private Endpoint
+↓
+Private DNS
+
+
+## ✨ Key Features
+
+- Enterprise-grade multi-region architecture
+- Active-Standby regional failover
+- Azure Front Door Premium global routing
+- Azure Application Gateway ingress
+- Linux App Service hosting
+- Private Endpoints
+- Private DNS integration
+- Infrastructure as Code using Terraform
+- Modular Terraform design
+- Production-ready deployment structure
+
+
+## ☁ Azure Services Used
+
+| Service | Purpose |
+|----------|---------|
+| Azure Front Door Premium | Global entry point |
+| Application Gateway | Regional Layer 7 Load Balancer |
+| Linux App Service | Web Hosting |
+| Private Endpoint | Private Connectivity |
+| Private DNS | Name Resolution |
+| Virtual Network | Network Isolation |
+| NSG | Network Security |
+| Terraform | Infrastructure as Code |
+
+
+## 🌍 High Availability Strategy
+
+This solution is designed for regional resilience.
+- Central India acts as the primary region.
+- South India acts as the disaster recovery region.
+- Azure Front Door continuously monitors origin health.
+- Automatic failover occurs when the active origin becomes unavailable.
+- Private networking ensures secure backend communication.
+
+
+## 🔒 Security Design
+
+The architecture follows a defense-in-depth approach.
+- Public exposure limited to Azure Front Door and Application Gateway
+- Backend App Services accessible only via Private Endpoints
+- Private DNS used for internal resolution
+- NSGs restrict subnet traffic
+- TLS termination handled at ingress
+- Foundation for WAF and Zero Trust adoption
+
+## 💰 Cost Considerations
+
+This architecture prioritizes reliability over minimum cost.
+
+Primary cost drivers include:
+- Azure Front Door Premium
+- Application Gateway Standard_v2
+- Linux App Service
+- Public IP
+- Private Endpoints
+
+Estimated monthly cost will vary depending on traffic volume, SKU selection, and region.
+
+
+## 🚀 Future Enhancements
+
+- HTTPS end-to-end
+- Azure Key Vault integration
+- Managed Identity
+- GitHub Actions CI/CD
+- Azure DevOps Pipeline
+- Monitoring with Azure Monitor
+- Log Analytics
+- Azure Policy
+- WAF custom rules
+- Active-Active deployment
+- Multi-environment support
+
+
+## 📚 Learning Outcomes
+
+This project demonstrates practical implementation of:
+- Azure Front Door
+- Application Gateway
+- Private Link
+- Private DNS
+- High Availability
+- Disaster Recovery
+- Terraform Modules
+- Infrastructure as Code
+- Enterprise Azure Networking
+
 
 ## Deployed Topology
 
